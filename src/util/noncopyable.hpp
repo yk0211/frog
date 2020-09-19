@@ -1,12 +1,17 @@
-#pragma once
+#ifndef _NONCOPYABLE_HPP_
+#define _NONCOPYABLE_HPP_
 
-namespace stellar {
-class Noncopyable {
-protected:
-  Noncopyable() = default;
-  ~Noncopyable() = default;
-private:
-  Noncopyable(const Noncopyable&) = delete;
-  Noncopyable& operator=(const Noncopyable&) = delete;        
+namespace frog {
+
+class NonCopyable {
+ protected:
+	NonCopyable() = default;
+	~NonCopyable() = default;
+ private:
+	NonCopyable(const NonCopyable&) = delete;
+	NonCopyable& operator=(const NonCopyable&) = delete;
 };
+
 }
+
+#endif
