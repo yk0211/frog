@@ -1,10 +1,9 @@
 #ifndef _SINGLETON_HPP_
 #define _SINGLETON_HPP_
 
+#include "noncopyable.hpp"
 #include <memory>
 #include <mutex>
-
-#include "noncopyable.hpp"
 
 namespace frog {
   

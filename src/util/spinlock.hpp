@@ -8,13 +8,13 @@ namespace frog {
 class Spinlock {
  public:
 	Spinlock() :flag_(ATOMIC_FLAG_INIT) {}
-	void lock() {
+	void Lock() {
 		while (flag_.test_and_set(std::memory_order_acquire));
 	}
-	void unlock() {
+	void UnLock() {
 		flag_.clear(std::memory_order_release);
 	}
-private:
+ private:
 	std::atomic_flag flag_;
 };
 
